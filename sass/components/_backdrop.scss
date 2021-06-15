@@ -7,7 +7,7 @@
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
-.backdrop.backdrop__hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -40,7 +40,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
 }
 
 .modal__form--field {
@@ -48,8 +48,10 @@
   flex-direction: column;
   align-items: flex-start;
   font-weight: 400;
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.16;
+  margin-bottom: 10px;
+  color: #757575;
 }
 .modal__form--input {
   width: 448px;
@@ -98,7 +100,9 @@
   align-items: center;
   font-weight: 400;
   font-size: 14px;
+  line-height: 1.71;
   margin-bottom: 20px;
+  color: #757575;
   &::before {
     display: inline-block;
     vertical-align: middle;
@@ -110,21 +114,20 @@
     cursor: pointer;
     margin-right: 10px;
   }
+  .modal__form--check:checked + &::before {
+    background-color: var(--accent-text-color);
+
+    background-image: url(../img/Vector.svg);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: center;
+  }
+  .modal__form--check:focus + &::before {
+    outline: 2px solid blue;
+    outline-offset: 1px;
+  }
 }
 
-.modal__form--check:checked + .modal__form--checkbox::before {
-  background-color: var(--accent-text-color);
-
-  background-image: url(../img/Vector.svg);
-  background-repeat: no-repeat;
-  background-size: 15px 15px;
-  background-position: center;
-}
-
-.modal__form--check:focus + .modal__form--checkbox::before {
-  outline: 2px solid blue;
-  outline-offset: 1px;
-}
 .modal__checkbox--link {
   margin-left: 5px;
   font-weight: normal;
@@ -148,11 +151,11 @@
   width: 13px;
   height: 13px;
   transition: background-color 250ms linear;
+  .modal__form--input:focus + & {
+    fill: var(--accent-text-color);
+  }
 }
 .modal__mail--icon {
   width: 15px;
   height: 15px;
-}
-.modal__form--input:focus + .modal__form--icon {
-  fill: var(--accent-text-color);
 }
