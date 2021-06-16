@@ -1,15 +1,15 @@
-.filters {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
+// .filters {
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 50px;
+// }
 
-.filters__item:not(:last-child) {
-  margin-right: 8px;
-}
-.filters__item :hover,
-.filters__item :focus {
-  color: var(--footer-text-color);
-  border-color: var(--accent-text-color);
-  background-color: var(--accent-text-color);
-}
+// .filters__item:not(:last-child) {
+//   margin-right: 8px;
+// }
+// .filters__item :hover,
+// .filters__item :focus {
+//   color: var(--footer-text-color);
+//   border-color: var(--accent-text-color);
+//   background-color: var(--accent-text-color);
+// }
